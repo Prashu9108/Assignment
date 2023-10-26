@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calucator</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="speaker"></div>
+        <input type="text" name="values" id="values">
+    <div class="container2">
+        <button onclick="clearTextBoxValues();">AC</button>
+        <button >DE</button>
+        <button  onclick="getValueButton(this.innerHTML);">/</button>
+        <button  onclick="getValueButton(this.innerHTML);">*</button>
+        <button  onclick="getValueButton(this.innerHTML);">1</button>
+        <button  onclick="getValueButton(this.innerHTML);">2</button>
+        <button  onclick="getValueButton(this.innerHTML);">3</button>
+        <button  onclick="getValueButton(this.innerHTML);">+</button>
+        <button  onclick="getValueButton(this.innerHTML);">4</button>
+        <button  onclick="getValueButton(this.innerHTML);">5</button>
+        <button  onclick="getValueButton(this.innerHTML);">6</button>
+        <button  onclick="getValueButton(this.innerHTML);">-</button>
+        <button  onclick="getValueButton(this.innerHTML);">7</button>
+        <button  onclick="getValueButton(this.innerHTML);">8</button>
+        <button  onclick="getValueButton(this.innerHTML);">9</button>
+        <button  onclick="result();">=</button>
+        <button  onclick="getValueButton(this.innerHTML);">%</button>
+        <button  onclick="getValueButton(this.innerHTML);">0</button>
+    </div>
+</div>
+    
+<script>
+    function getValueButton(value){
+        document.getElementById("values").value += value;
+
+    }
+    function clearTextBoxValues(){
+        document.getElementById("values").value = "";
+    }
+    function result(){
+        let result = eval(document.getElementById("values").value);
+        document.getElementById("values").value = result;
+    }
+
+</script>
+</body>
+</html>
